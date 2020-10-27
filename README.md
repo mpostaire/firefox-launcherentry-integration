@@ -17,5 +17,5 @@ Then place `firefox_launcherentry_integration.py` and `firefox_launcherentry_int
 Alternatively you can use this command:
 
 ```bash
-sudo curl -s "https://raw.githubusercontent.com/mpostaire/firefox-launcherentry-integration/master/app/firefox_launcherentry_integration.{py,json}" -o "/usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.#1" && sudo chmod +x /usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.py
+sudo curl -s --create-dirs "https://raw.githubusercontent.com/mpostaire/firefox-launcherentry-integration/master/app/firefox_launcherentry_integration.{py,json}" -o "/usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.#1" && sudo chmod +x /usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.py
 ```
