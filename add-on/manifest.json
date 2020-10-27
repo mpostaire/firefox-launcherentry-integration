@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Firefox LauncherEntry Integration",
+    "name": "LauncherEntry Integration",
     "version": "1.0",
     "description": "Adds download count and progress to any dock/panel compatible with Unity's LauncherEntry specification.",
     "browser_specific_settings": {
