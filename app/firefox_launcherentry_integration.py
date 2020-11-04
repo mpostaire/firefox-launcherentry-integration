@@ -36,13 +36,22 @@ def getMessage(source, condition, data):
     return True
 
 
+def shutdown(source, condition, data):
+    data.quit()
+
+
 if __name__ == "__main__":
+    loop = GLib.MainLoop()
+
     bus = Gio.bus_get_sync(Gio.BusType.SESSION)
     stdin = GLib.IOChannel.unix_new(sys.stdin.fileno())
     stdin.set_encoding(None)
     stdin.set_buffered(False)
     GLib.io_add_watch(stdin, GLib.PRIORITY_DEFAULT,
                       GLib.IOCondition.IN, getMessage, bus)
+    GLib.io_add_watch(stdin, GLib.PRIORITY_DEFAULT,
+                      GLib.IOCondition.HUP, shutdown, loop)
+    GLib.io_add_watch(stdin, GLib.PRIORITY_DEFAULT,
+                      GLib.IOCondition.ERR, shutdown, loop)
 
-    loop = GLib.MainLoop()
     loop.run()
