@@ -10,12 +10,12 @@ Adds download count and progress to any dock/panel compatible with Unity's Launc
 
 ## Installation
 
-Install the Firefox extension at: www.example.com.
+Install the Firefox extension at: https://addons.mozilla.org/fr/firefox/addon/launcherentry-integration/.
 
 Then place `firefox_launcherentry_integration.py` and `firefox_launcherentry_integration.json` in the `/usr/lib/mozilla/native-messaging-hosts/` directory to install the host application. You need to make `firefox_launcherentry_integration.py` executable.
 
 Alternatively you can use this command:
 
 ```bash
-sudo curl -s --create-dirs "https://raw.githubusercontent.com/mpostaire/firefox-launcherentry-integration/master/app/firefox_launcherentry_integration.{py,json}" -o "/usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.#1" && sudo chmod +x /usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.py
+sudo mkdir --parents --mode=g+r,o+r /usr/lib/mozilla/native-messaging-hosts && sudo curl -s "https://raw.githubusercontent.com/mpostaire/firefox-launcherentry-integration/master/app/firefox_launcherentry_integration.{py,json}" -o "/usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.#1" && sudo chmod +x /usr/lib/mozilla/native-messaging-hosts/firefox_launcherentry_integration.py
 ```
