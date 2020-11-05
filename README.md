@@ -1,6 +1,6 @@
 # Firefox LauncherEntry Integration
 
-Adds download count and progress to any dock/panel compatible with Unity's LauncherEntry specification.
+Adds firefox's download count and progress to any dock/panel compatible with Unity's LauncherEntry specification.
 
 ## Dependencies
 
